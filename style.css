@@ -1,0 +1,217 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-size: cover;
+    background-color: #eae05e;
+    scroll-behavior: smooth;
+}
+
+nav {
+    border: 1px solid rgb(112, 187, 183);
+    border-radius: 10px;
+    /* margin: -15px; */
+    background-color: #7e6ab8;
+}
+
+.navbar-brand img {
+    max-width: 100%;
+    height: auto;
+}
+
+.nav-item a {
+    border-right: 1px solid white;
+    margin: 1em;
+    padding-right: 2em;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 2.5rem;
+    padding-left: 0;
+}
+
+.nav-link {
+    padding: 0px;
+}
+
+.border {
+    border: 1px solid rgb(192, 186, 186);
+    border-radius: 10px;
+    background-color: #45376d;
+    margin: 1px;
+
+}
+
+#myBtn {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Fixed/sticky position */
+    bottom: 20px;
+    /* Place the button at the bottom of the page */
+    right: 30px;
+    /* Place the button 30px from the right */
+    z-index: 99;
+    /* Make sure it does not overlap */
+    border: none;
+    /* Remove borders */
+    outline: none;
+    /* Remove outline */
+    background-color: rgb(103, 195, 167);
+    /* Set a background color */
+    color: white;
+    /* Text color */
+    cursor: pointer;
+    /* Add a mouse pointer on hover */
+    padding: 15px;
+    /* Some padding */
+    border-radius: 10px;
+    /* Rounded corners */
+    font-size: 18px;
+    /* Increase font size */
+}
+
+#myBtn:hover {
+    background-color: rgb(167, 113, 179);
+    /* Add a dark-grey background on hover */
+}
+
+
+
+.message {
+    position: fixed;
+    right: 30%;
+    top: 50px;
+    text-align: center;
+    background-color: #7b668f;
+    padding: 20px;
+    width: 40%;
+    z-index: 1000;
+    border-radius: 10px;
+    display: none;
+    border: 1px solid rgb(192, 186, 186);
+    animation-name: message;
+    animation-duration: 0.3s;
+}
+
+@keyframes message {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.close {
+    animation-name: close;
+    animation-duration: 0.3s;
+}
+
+@keyframes close {
+    from {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+}
+
+
+
+
+.todos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin-top: 25px;
+
+}
+
+.todo h4 {
+    transition: 0.3s;
+}
+
+
+.todo {
+    display: flex;
+
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    color: rgb(143, 5, 5);
+    width: 100%;
+    gap: 20px;
+    position: relative;
+    transition: 0.3s;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+.todo h3 {
+    font-size: 20px;
+    font-weight: 400;
+    user-select: none;
+    transition: 0.3s;
+}
+
+.todo h5 {
+    position: absolute;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #36b462;
+    color: #fff;
+    font-weight: 400;
+    transition: 0.3s;
+}
+
+input {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    background-color: #e6e6e6;
+    /* transition: 0.3s; */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    transition: 0.3s;
+    align-items: center;
+}
+
+input::after {
+    font-family: "Font Awesome 6 Free";
+    content: "\f00c";
+    font-weight: 900;
+    color: #fff;
+    display: none;
+    font-size: 10px;
+}
+
+input:hover {
+    background-color: #c8c8c8;
+}
+
+
+input:checked {
+    background-color: #ffff55;
+}
+
+input:checked:after {
+    display: flex;
+}
